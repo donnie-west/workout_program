@@ -1,0 +1,42 @@
+
+//Single exercise class that I made 
+'''
+class singleExercise:
+    def __init__(self, exercise, sets, reps,date = dt.date.today(),weight=[],rpe=0,notes=''):
+        self.date = date
+        self.exercise = exercise
+        self.sets = sets
+        self.reps = reps
+        self.weight = weight
+        self.rpe = rpe
+        self.notes = notes
+
+    def __str__(self):
+        return f"{self.date}, {self.exercise}, {self.sets}, {self.reps}, {self.weight}, {self.rpe}, {self.notes}"
+'''
+
+//The beginning of a menu UI that was meant to log a single exercise
+
+'''
+def mainMenu():
+    print('MAIN MENU')
+    print('Please select an option:')
+    userinp = input()
+
+    if userinp == '1':
+        addExercise()
+
+def addExercise(df):
+    date = input('Enter the date (YYYY/MM/DD): ')
+    yeardate = dt.datetime.strptime(date,"%Y/%m/%d")
+    exercise = str(input('Enter the exercise name: '))
+    sets = int(input('Enter the number of sets: '))
+    reps = int(input('Enter the number of reps: '))
+    #weight = int(input('Enter the weight: '))
+    rpe = int(input('Enter your effort: '))
+    notes = str(input('Enter any notes: '))
+
+    methinst = singleExercise(exercise, sets, reps, rpe)
+
+    return methinst
+'''   
